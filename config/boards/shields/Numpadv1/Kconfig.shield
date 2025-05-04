@@ -1,2 +1,2 @@
 config SHIELD_NUMPADV1
-    def_bool $(shields_list_contains, Numpadv1)
+    def_bool $(shields_list_contains, numpadv1)
