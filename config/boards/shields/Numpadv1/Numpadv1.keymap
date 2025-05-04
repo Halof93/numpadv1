@@ -1,0 +1,40 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/{
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                bindings = <
+                &kp NUMLOCK  &kp NPSLASH &kp KPASTERISK &kp KPMINUS
+                &kp KP7      &kp KP8     &kp KP9        &kp KPPLUS
+                &kp KP4      &kp KP5     &kp KP6        &none 
+                &kp KP1      &kp KP2     &kp KP3        &kp KPENTER
+                &kp KP0      &none       &kp KPDOT      &none
+            >;
+        };
+
+        bt_layer {
+            bindings = <
+                &none          &none          &none          &none
+                &none          &none          &none          &none
+                &none          &none          &none          &none 
+                &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bootloader 
+                &none          &none          &bt BT_CLR     &none 
+            >;
+        };
+    };
+
+     combos {
+        compatible = "zmk,combos";
+
+        combo_enter_bt_layer {
+            timeout-ms = <50>;
+            key-positions = <2 3>; // Index of KPASTERISK and KPMINUS
+            bindings = <&mo bt_layer>; // Momentary access; use &tog bt_layer to toggle
+        };
+    };
+};
