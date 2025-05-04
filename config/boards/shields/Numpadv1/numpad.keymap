@@ -9,11 +9,11 @@
         default_layer {
             bindings = <
                 bindings = <
-                &kp NUMLOCK  &kp NPSLASH &kp KPASTERISK &kp KPMINUS
-                &kp KP7      &kp KP8     &kp KP9        &kp KPPLUS
-                &kp KP4      &kp KP5     &kp KP6        &none 
-                &kp KP1      &kp KP2     &kp KP3        &kp KPENTER
-                &kp KP0      &none       &kp KPDOT      &none
+                &kp NUMLOCK  &kp NPSLASH &kp ASTRK &kp MINUS
+                &kp N7      &kp N8     &kp N9        &kp PLUS
+                &kp N4      &kp N5     &kp N6        &none 
+                &kp N1      &kp N2     &kp N3        &kp ENTER
+                &kp N0      &none      &kp DOT       &none
             >;
         };
 
