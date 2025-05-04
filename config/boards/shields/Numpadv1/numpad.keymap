@@ -8,9 +8,9 @@
 
         default_layer {
             bindings = <
-                &kp NUMLOCK  &kp KP_SLASH   &kp KP_ASTERISK   &kp KP_MINUS
+                &kp NUMLOCK  &kp KP_SLASH   &kp KP_ASTERISK  &kp KP_MINUS
                 &kp KP_7     &kp KP_8       &kp KP_9         &kp KP_PLUS
-                &kp KP_4     &kp KP_5       &kp KP_6         &none
+                &kp KP_4     &kp KP_5       &kp KP_6         &mo 1
                 &kp KP_1     &kp KP_2       &kp KP_3         &kp KP_ENTER
                 &kp KP_0     &none          &kp KP_DOT       &none
             >;
@@ -24,16 +24,6 @@
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
                 &none        &none        &bt BT_CLR   &none
             >;
-        };
-    };
-
-     combos {
-        compatible = "zmk,combos";
-
-        combo_enter_bt_layer {
-            timeout-ms = <50>;
-            key-positions = <2 3>; // Index of KPASTERISK and KPMINUS
-            bindings = <&mo bt_layer>; // Momentary access; use &tog bt_layer to toggle
         };
     };
 };
