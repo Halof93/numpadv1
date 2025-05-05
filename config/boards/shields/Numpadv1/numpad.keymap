@@ -7,8 +7,8 @@
 #define KP_MULT KP_MULTIPLY
 
 // define layers
-#define default_layer 0
-#define bt_layer 1
+#define DEFAULT 0
+#define BT 1
 
 
 /{
@@ -20,7 +20,7 @@
             key-positions = <2 3>; // Index of KPASTERISK and KPMINUS
             bindings = <&mo bt_layer>; // Momentary access; use &tog bt_layer to toggle
         };
-        
+
     keymap {
         compatible = "zmk,keymap";
 
